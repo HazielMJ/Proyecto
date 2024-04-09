@@ -1,0 +1,47 @@
+
+
+
+.Amino:hover {filter: blur(5px);} 
+.B-nox:hover {filter: blur(5px);} 
+.carnivor:hover {filter: blur(5px);} 
+.Hiroshima:hover {filter: blur(5px);} 
+.HMB:hover {filter: blur(5px);} 
+.Nitrotech:hover {filter: blur(5px);} 
+.Psychotic:hover {filter: blur(5px);} 
+.Creatine:hover {filter: blur(5px);} 
+
+h3{text-align=center}
+footer{
+background:#CE93D8; width="99%" heigth="40px";
+   box-shadow: 6px 20px 1px black;}
+
+body{background-color:white;
+}
+
+
+
+    /* Estilos para el menú */
+    .menu {
+      float: left; width: 200px; background-color: #f1f1f1; padding: 20px;
+    }
+    /* Estilos adicionales para mejorar la apariencia */
+    .menu ul {
+      list-style-type: none; /* Quita los marcadores de lista */
+      padding: 0;
+    }
+    .menu li a {
+      display: block; /* Convierte los enlaces en bloques para que ocupen todo el ancho del menú */
+      padding: 10px;
+      text-decoration: none;
+      color: #333;
+    }
+    .menu li a:hover {
+      background-color: #ddd; /* Color de fondo al pasar el ratón sobre los enlaces */
+    }
+.footer{
+text-align:center;
+padding:20 px;
+position:fixed;
+bottom:0;
+width:100%
+}

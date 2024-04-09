@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>...Chayagym...</title>
+<link rel="stylesheet" href="EstiloCrro.css" type="text/css"/>
+</head>
+<body class="main-container">
+  <div class="header">
+    <div class="logo">
+      <a href="PaginPrin.html"><img src="Img/logo.png" alt="Chayagym" width="100" height="100"></a>
+    </div>
+    <div class="Nombre">
+      <h1>Chayagym</h1>
+    </div>
+    <div class="dropdown">
+      <button onclick="toggleDropdown()" class="dropbtn">Categorias</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="Suplementos.html">Suplementos</a>
+        <a href="Bebidas.html">Bebidas energeticas y deportivas</a>
+        <a href="Equipo.html">Equipo</a>
+        <a href="Ropa.html">Ropa</a>
+        <a href="Accesorios.html">Accesorios</a>
+      </div>
+    </div>
+    <div class="cart-icon">
+      <a href="Carro.html"><img src="Img/Carrito.png" alt="Icono del Carrito" width="70" height="70"></a>
+    </div>
+
+    <button class="login"><a href="Login.html" class="login">Iniciar Sesión</a></button>
+  </div>
+  
+<script>
+  function toggleDropdown() {
+  var dropdownContent = document.getElementById("myDropdown");
+  dropdownContent.classList.toggle("show");
+}
+
+// Cerrar el menú si el usuario hace clic fuera de él
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+</script>
+
+
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <a href="Accesorios.html"><img src="img/Wraps.jpg" alt="Accesorios" width="180px" height="260px"></a>
+  </div>
+  <div class="mySlides fade">
+    <a href="Suplementos.html"><img src="Img/HMB.jpeg" alt="Suplementos" width="230px" height="160px"></a>
+  </div>
+  <div class="mySlides fade">
+    <a href="Equipo.html"><img src="Img/Multicorrea.jpg" alt="Equipo" width="150px" height="210px"></a>
+  </div>
+  <div class="mySlides fade">
+    <a href="Ropa.html"><img src="img/Sudaderam.jpg" alt="Ropa" width="140px" height="200px"></a>
+  </div>
+  <div class="mySlides fade">
+    <a href="Bebidas.html"><img src="img/12Bull.jpeg" alt="Bebidas" width="200px" height="160px"></a>
+  </div>
+</div>
+
+<script>
+  var slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    var slides = document.getElementsByClassName("mySlides");
+    for (var i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 3000); // Cambia la imagen cada 3 segundos
+  }
+</script>
+
+
+<div class="container">
+  <div class="row">
+    <div class="item">
+      <img src="Img/Almohadilla.jpg"Producto" class="Prod"> 
+      <button class="login"><a href="Accesorios.html" class="login">Accesorios</a></button>
+    </div>
+    <div class="item">
+      <img src="img/B-nox.jpeg" alt="Producto" class="Prod">
+      <button class="login"><a href="Suplementos.html" class="login">Suplementos</a></button>
+    </div>
+    <div class="item">
+      <img src="img/PantalonD.jpg" alt="Producto" class="Prod">
+      <button class="login"><a href="Ropa.html" class="login">Ropa</a></button>
+    </div>
+    <div class="item">
+      <img src="img/PesasTob.jpg" alt="Producto" class="Prod">
+      <button class="login"><a href="Equipo.html" class="login">Equipo</a></button>
+    </div>
+    <div class="item">
+      <img src="img/12Bull.jpeg" alt="Producto" class="Prod">
+      <button class="login"><a href="Bebidas.html" class="login">Bebidas</a></button>
+  </div>
+  </div>
+
+
+  <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h2>Sobre Nosotros</h2>
+            <p>Somos una tienda de artículos deportivos comprometida con la calidad y el servicio al cliente.</p>
+        </div>
+  
+        <div class="footer-section enlaces-rapidos">
+            <h2>Enlaces Rápidos</h2>
+            <ul>
+                <li><a href="PaginPrin.html">Inicio</a></li>
+                <li><a href="Carro.html">Productos</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Términos y Condiciones</a></li>
+            </ul>
+        </div>
+  
+        <div class="footer-section contacto">
+            <h2>Contacto</h2>
+            <p><i class="fas fa-phone"></i> +1 (123) 456-7890</p>
+            <p><i class="fas fa-envelope"></i> info@tuempresa.com</p>
+        </div>
+  
+        <div class="footer-section redes-sociales">
+            <h2>Redes Sociales</h2>
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+  
+    <div class="footer-bottom">
+        &copy; 2024 Tu Empresa | Todos los derechos reservados
+    </div>
+  </footer>
+
+</body>
+</html>
+

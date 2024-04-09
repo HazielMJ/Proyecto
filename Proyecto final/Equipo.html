@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>...Chayagym...</title>
+<link rel="stylesheet" href="Cat.css" type="text/css"/>
+</head>
+<body class="main-container">
+  <div class="header">
+    <div class="logo">
+      <a href="PaginPrin.html"><img src="Img/logo.png" alt="Chayagym" width="100" height="100"></a>
+  </div>
+  <div class="Nombre">
+    <h1>Chayagym</h1>
+  </div>
+    <div class="dropdown">
+      <button onclick="toggleDropdown()" class="dropbtn">Categorias</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="Suplementos.html">Suplementos</a>
+        <a href="Bebidas.html">Bebidas energeticas y deportivas</a>
+        <a href="Equipo.html">Equipo</a>
+        <a href="Ropa.html">Ropa</a>
+        <a href="Accesorios.html">Accesorios</a>
+      </div>
+    </div>
+    <div class="cart-icon">
+      <a href="Carro.html"><img src="Img/Carrito.png" alt="Icono del Carrito" width="70" height="70"></a>
+    </div>
+    <button class="login"><a href="Login.html" class="login">Iniciar Sesión</a></button>
+  </div>
+<script>
+  function toggleDropdown() {
+  var dropdownContent = document.getElementById("myDropdown");
+  dropdownContent.classList.toggle("show");
+}
+
+// Cerrar el menú si el usuario hace clic fuera de él
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+</script>
+
+
+<button class="menu-btn" onclick="toggleMenu()">Mi Lista</button>
+<div class="menu" id="menu">
+  <ul id="menu-items">
+    <!-- Elementos de la lista se agregarán aquí -->
+  </ul>
+  <button class="realizar-compra-btn" onclick="realizarCompra()">Realizar Compra</button>
+</div>
+  <div class="container">
+    <div class="row">
+      <div class="item">
+          <img src="img/12Bull.jpeg" alt="Producto" class="Prod">
+        
+          <div class="product-info">
+              <p>Red Bull 12 pzas</p>
+              <p>Red Bull Bebida Energética 12 pzas de 250 ml</p>
+              <p>Precio: $549.00</p>
+              <button class="boton-carro" onclick="agregarAlCarro('Red Bull 12 pzas', 549)">Agregar al Carro</button>
+            </div>
+      </div>
+      <div class="item">
+          <img src="img/4Bull.jpeg" alt="Producto" class="Prod">
+        
+          <div class="product-info">
+            <p>Red Bull 4 pzas</p>
+            <p>Un Paquete De 4 Bebidas Energéticas Red Bull</p>
+            <p>Precio: $168.00</p>
+            <button class="boton-carro" onclick="agregarAlCarro('Red Bull 4 pzas', 168)">Agregar al Carro</button>
+            </div>
+      </div>
+      <div class="item">
+          <img src="img/12Power.jpeg" alt="Producto" class="Prod">
+        
+          <div class="product-info">
+            <p>Bebida Isotónica Powerade 12 pzas de 1 L</p>
+            <p>Tu cuerpo logrará una absorción más rápida de líquidos durante el ejercicio</p>
+            <p>Te ayuda a mantener el desempeño deportivo gracias a la energía que te dan sus carbohidratos</p>
+            <p>Precio: $252.00</p>
+            <button class="boton-carro" onclick="agregarAlCarro('Powerade 12 pzas', 252)">Agregar al Carro</button>
+        </div>
+      </div>
+      <div class="item">
+          <img src="img/24Gatorade.jpeg" alt="Producto" class="Prod">
+        
+          <div class="product-info">
+            <p>Gatorade 24 pzas de 350 ml</p>
+            <p>Gatorade 350ml en sabores naranja, moras y uva tiene la fórmula óptima que te hidrata, repone y activa durante el deporte</p>
+            <p>Precio: $279.00</p>
+            <button class="boton-carro" onclick="agregarAlCarro('Gatorade 24 pzas de 350 ml', 279)">Agregar al Carro</button>
+            </div>
+      </div>
+    </div>
+    <div class="container">
+  <div class="row">
+    <div class="item">
+        <img src="img/Prime.jpeg" alt="Producto" class="Prod">
+      
+        <div class="product-info">
+          <p>Paquete de variedades de bebidas deportivas Prime Hydration </p>
+          <p>Bebida energética, bebidas electrolíticas - Paquete de variedades - 16.9 Fl Oz Por Golax ( Paquete de 8 )</p>
+          <p>Precio: $888.00</p>
+          <button class="boton-carro" onclick="agregarAlCarro('Paquete de variedades de bebidas deportivas Prime Hydration', 888)">Agregar al Carro</button>
+          </div>
+      </div>
+    <div class="item">
+        <img src="img/Rocket6.jpeg" alt="Producto" class="Prod">
+      
+        <div class="product-info">
+          <p>Rocket 6 pzas</p>
+          <p>Bebida energizante Rocket High 6 pzas con 473 ml c/u</p>
+          <p>Precio: $263.00</p>
+          <button class="boton-carro" onclick="agregarAlCarro('Rocket 6 pzas', 263)">Agregar al Carro</button>
+          </div>
+      </div>
+    <div class="item">
+        <img src="img/Monster12.jpeg" alt="Producto" class="Prod">
+      
+        <div class="product-info">
+          <p>Monster Energy 12</p>
+          <p>Bebida energizante de 10.5 onzas líquidas, paquete de 12</p>
+          <p>Precio: $650.00</p>
+          <button class="boton-carro" onclick="agregarAlCarro('Monster Energy 12', 650.00)">Agregar al Carro</button>
+          </div>
+      </div>
+    <div class="item">
+        <img src="img/Amper.jpeg" alt="Producto" class="Prod">
+        
+        <div class="product-info">
+          <p>Amper 12 unidades de 473 ml</p>
+          <p>Amper es la bebida energizante, deliciosa y refrescante que te ayuda a recuperar tu energía en el día a día. Vive 100% esta hecha con los ingredientes naturales extracto de guaraná y extracto de té.</p>
+          <p>Precio: $229.00</p>
+          <button class="boton-carro" onclick="agregarAlCarro('Amper 12 unidades de 473 ml', 229)">Agregar al Carro</button>
+          </div>
+    </div>
+  </div>
+</div>
+
+<div id="carrito"></div>
+
+<script>
+function getImageSource(producto) {
+  var imagenPorProducto = {
+    "Red Bull 12 pzas": " img/12Bull.jpeg",
+    "Red Bull 4 pzas": "img/4Bull.jpeg",
+    "Powerade 12 pzas": "img/12Power.jpeg",
+    "Gatorade 24 pzas de 350 ml": "img/24Gatorade.jpeg",
+    "Paquete de variedades de bebidas deportivas Prime Hydration": "img/Prime.jpeg",
+    "Rocket 6 pzas": "img/Rocket6.jpeg",
+    "Monster Energy 12": "img/Monster12.jpeg",
+    "Amper 12 unidades de 473 ml": "img/Amper.jpeg",
+    // Agrega más productos y rutas de imágenes según sea necesario
+  };
+  // Devuelve la ruta de la imagen correspondiente al producto
+  return imagenPorProducto[producto];
+}
+
+// Objeto para llevar el registro de la cantidad de productos en el carrito
+var carritoProductos = {};
+
+function toggleMenu() {
+  var menu = document.getElementById("menu");
+  menu.classList.toggle("active");
+
+  if (menu.classList.contains("active")) {
+    // Mostrar los datos en el menú
+    mostrarDatos();
+  }
+}
+
+function mostrarDatos() {
+  // Ocultar el div que contiene el mensaje
+  var mensajeCarrito = document.getElementById("carrito");
+  mensajeCarrito.style.display = "none";
+
+  var listaMenu = document.getElementById("menu-items");
+  listaMenu.innerHTML = ""; // Limpiar la lista antes de agregar nuevos elementos
+
+  var total = 0;
+
+  // Agregar cada producto al menú "Mi Lista"
+  Object.keys(carritoProductos).forEach(function(producto) {
+    var cantidad = carritoProductos[producto].cantidad;
+    var precioUnitario = carritoProductos[producto].precio;
+    var subtotal = cantidad * precioUnitario;
+    total += subtotal;
+
+    var nuevoElemento = document.createElement("li");
+    nuevoElemento.innerHTML = `<img src="${getImageSource(producto)}" alt="${producto}" class="product-image">${producto} - Cantidad: ${cantidad} - Subtotal: $${subtotal.toFixed(2)} <button class="boton-quitar" onclick="quitarDelCarro('${producto}')">Quitar</button>`;
+    listaMenu.appendChild(nuevoElemento);
+  });
+
+  // Agregar el total al final de la lista
+  var totalElemento = document.createElement("li");
+  totalElemento.textContent = "Total: $" + total.toFixed(2);
+  listaMenu.appendChild(totalElemento);
+
+}
+
+function agregarAlCarro(nombreProducto, precioProducto) {
+  if (carritoProductos[nombreProducto]) {
+    // Si el producto ya está en el carrito, incrementar la cantidad
+    carritoProductos[nombreProducto].cantidad++;
+  } else {
+    // Si es la primera vez que se agrega el producto, establecer la cantidad en 1
+    carritoProductos[nombreProducto] = { cantidad: 1, precio: precioProducto };
+  }
+
+  // Actualizar la visualización del carrito y la lista "Mi Lista"
+  actualizarCarrito();
+  mostrarDatos();
+}
+
+function quitarDelCarro(nombreProducto) {
+  if (carritoProductos[nombreProducto]) {
+    // Restar la cantidad del producto en el carrito
+    carritoProductos[nombreProducto].cantidad--;
+
+    // Si la cantidad es cero, eliminar el producto del carrito
+    if (carritoProductos[nombreProducto].cantidad === 0) {
+      delete carritoProductos[nombreProducto];
+    }
+  }
+
+  // Actualizar la visualización del carrito y la lista "Mi Lista"
+  actualizarCarrito();
+  mostrarDatos();
+}
+
+function actualizarCarrito() {
+  var carrito = document.getElementById("carrito");
+  carrito.innerHTML = ""; // Limpiar el carrito antes de agregar nuevos elementos
+
+  // Actualizar el contenido del carrito con la lista de productos y sus cantidades
+  Object.keys(carritoProductos).forEach(function(producto) {
+    var cantidad = carritoProductos[producto].cantidad;
+    var nuevoElemento = document.createElement("p");
+    nuevoElemento.textContent = "Producto: " + producto + ", Cantidad: " + cantidad;
+    carrito.appendChild(nuevoElemento);
+  });
+}
+
+  function realizarCompra() {
+  // Calcula el total de la compra
+  var totalCompra = calcularTotalCompra();
+
+  // Redirige a otra página y pasa el total de la compra como parámetro
+  window.location.href = "Pagos.html?total=" + totalCompra;
+}
+
+function calcularTotalCompra() {
+  var total = 0;
+
+  // Itera sobre los productos en el carrito y calcula el subtotal de cada uno
+  Object.keys(carritoProductos).forEach(function(producto) {
+    var cantidad = carritoProductos[producto].cantidad;
+    var precioUnitario = carritoProductos[producto].precio;
+    var subtotal = cantidad * precioUnitario;
+    total += subtotal;
+  });
+
+  return total.toFixed(2);
+}
+</script>
+
+<footer class="footer">
+  <div class="footer-content">
+      <div class="footer-section about">
+          <h2>Sobre Nosotros</h2>
+          <p>Somos una tienda de artículos deportivos comprometida con la calidad y el servicio al cliente.</p>
+      </div>
+
+      <div class="footer-section enlaces-rapidos">
+          <h2>Enlaces Rápidos</h2>
+          <ul>
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Productos</a></li>
+              <li><a href="#">Contacto</a></li>
+              <li><a href="#">Términos y Condiciones</a></li>
+          </ul>
+      </div>
+
+      <div class="footer-section contacto">
+          <h2>Contacto</h2>
+          <p><i class="fas fa-phone"></i> +1 (123) 456-7890</p>
+          <p><i class="fas fa-envelope"></i> Chayagym@gmail.com</p>
+      </div>
+
+      <div class="footer-section redes-sociales">
+          <h2>Redes Sociales</h2>
+          <ul>
+              <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+              <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+          </ul>
+      </div>
+  </div>
+
+  <div class="footer-bottom">
+      &copy; 2024 Tu Empresa | Todos los derechos reservados
+  </div>
+</footer>
+</body>
+</html>
