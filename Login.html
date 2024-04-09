@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iniciar Sesión</title>
+<link rel="stylesheet" href="Log.css" type="text/css"/>
+</head>
+<body>
+<div class="container">
+    <h2>Iniciar Sesión</h2>
+    <form id="loginForm" onsubmit="return validateForm()">
+        <div id="errorMessage" class="error" style="display:none;"></div>
+        <input type="text" id="username" placeholder="Nombre de Usuario" required>
+        <input type="password" id="password" placeholder="Contraseña" required>
+        <input type="submit" value="Iniciar Sesión">
+    </form>
+    <p>¿No tienes una cuenta? <a href="Crear cuenta.html">Crear cuenta</a></p>
+</div>
+
+<script>
+    function validateForm() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var errorMessage = document.getElementById("errorMessage");
+
+        // Verificar si el nombre de usuario y la contraseña son válidos
+        if (username === "admin" && password === "admin") {
+            alert("Bienvenido, administrador!");
+            return true;
+        } else if (username === "usuario" && password === "usuario") {
+            alert("Bienvenido, usuario!");
+            return true;
+        } else {
+            errorMessage.style.display = "block";
+            errorMessage.innerHTML = "Nombre de usuario o contraseña incorrectos.";
+            return false;
+        }
+    }
+</script>
+</body>
+</html>

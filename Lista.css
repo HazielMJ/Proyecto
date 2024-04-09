@@ -1,0 +1,38 @@
+/* Estilos CSS para la página de detalles del pedido */
+
+/* Estilos para el cuerpo de la página */
+body {
+    background-color: #e0e9f0; /* Color de fondo azul claro */
+    font-family: Arial, sans-serif; /* Tipo de fuente */
+    margin: 0; /* Eliminar márgenes predeterminados */
+    padding: 20px; /* Añadir espacio interno */
+}
+
+/* Estilos para el encabezado */
+h1 {
+    color: #333; /* Color del texto */
+}
+
+/* Estilos para el párrafo */
+p {
+    color: #666; /* Color del texto */
+    line-height: 1.5; /* Altura de línea */
+}
+
+/* Estilos para el botón de realizar pedido */
+.boton-pedido {
+    background-color: #4CAF50; /* Color de fondo verde */
+    color: white; /* Color del texto */
+    padding: 15px 30px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor al pasar el ratón */
+    position: fixed; /* Posición fija */
+    bottom: 20px; /* Alineación al fondo */
+    right: 20px; /* Alineación a la derecha */
+}
+
+/* Estilos para el botón al pasar el ratón */
+.boton-pedido:hover {
+    background-color: #45a049; /* Color de fondo más oscuro al pasar el ratón */
+}

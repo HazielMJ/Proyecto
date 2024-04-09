@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title> Datos Personales</title>
+  <link rel="stylesheet" href="CC.css" type="text/css"/>
+</head>
+<body>
+
+  <fieldset> 
+<legend>
+  <div class="logo">
+    <a href="PaginPrin.html"><img src="Img/logo.png" alt="Chayagym" width="80" height="80"></a>
+  </div>
+  <h1>Crear Nuevo Usuario</h1>
+</legend>
+
+  <form action="#" method="post" id="personalInfoForm">
+    <label>Nombres: <input type="text" name="nombres" required></label>
+    <label>Apellido Paterno: <input type="text" name="apellidoPaterno" required></label>
+    <label>Apellido Materno: <input type="text" name="apellidoPaterno" required></label>
+    <label>Sexo:
+      <input type="radio" name="sexo" value="masculino" required> M
+      <input type="radio" name="sexo" value="femenino" required> F
+    </label>
+    <label>Edad: <input type="number" name="edad" min="1" max="99" required></label>
+
+    <label>Telefono: <input type="tel" name="Telefono" required></label>
+    <label>Correo Electrónico: <input type="email" name="correo" required></label>
+    <label>Crear Contraseña: <input type="password" name="Contraseña" required></label>
+    <label>Confirmar Contraseña: <input type="password" name="Contraseña" required></label>
+    </label>Dia de registro: <input type="date" name="dia de registro"/><br/>
+    <div>
+      <button type="reset">Reset</button>
+      <button type="submit">Crear Usuario</button>
+    </div>
+  </fieldset>
+  </form>
+</body>
+</html>

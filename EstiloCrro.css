@@ -1,0 +1,256 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+  position:relative;
+  padding-bottom: 3em;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.Nombre h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.cart-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 30px;
+  background-color: #333;
+
+}
+
+.login {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Estilo del botón */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Estilo del contenedor de opciones */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Estilo de las opciones (ocultas por defecto) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Estilo de los enlaces dentro del contenedor de opciones */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Estilo de los enlaces al pasar el cursor sobre ellos */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Mostrar las opciones cuando el botón se hace clic */
+.show {
+  display: block;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.item {
+  flex: 1;
+  margin: 4px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.item img {
+  max-width: 100%; /* Hacer que las imágenes se ajusten al ancho del contenedor */
+  height: auto; /* Mantener la proporción de aspecto de las imágenes */
+}
+
+/* Estilos para la imagen */
+.Prod:hover {filter: blur(10px); 
+  width: 80%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.boton-carro {
+  background-color: #4CAF50; /* Color de fondo verde */
+  border: none;
+  color: white;
+  padding: 10px 20px; /* Espaciado interior del botón */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px; /* Bordes redondeados */
+  transition-duration: 0.4s; /* Duración de la transición al pasar el mouse */
+}
+
+/* Cambiar el color de fondo al pasar el mouse sobre el botón */
+.boton-carro:hover {
+  background-color: #45a049;
+}
+
+.main-container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+
+.menu {
+  display: none;
+  position: fixed;
+  top: 60px;
+  left: 20px;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.menu.active {
+  display: block;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+  /* Estilos para el contenedor principal */
+  .slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden; /* Para recortar las imágenes que exceden el contenedor */
+    border: 2px solid #ccc; /* Borde con color gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #f5f5f5; /* Color de fondo */
+  }
+
+  /* Estilos para las imágenes */
+  .mySlides img {
+    display: block; /* Eliminar el espacio debajo de las imágenes */
+    border-radius: 10px; /* Bordes redondeados para las imágenes */
+  }
+
+  /* Estilos para la transición de las imágenes */
+  .fade {
+    animation: fade 3s infinite; /* Transición de 3 segundos entre imágenes */
+  }
+
+  /* Animación de transición */
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+/* Estilos para el footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  padding: 20px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h2 {
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  background-color: #222;
+  text-align: center;
+  padding: 10px 0;
+}
+
+
+
+       

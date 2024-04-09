@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detalles del Producto</title>
+<link rel="stylesheet" href="Lista.css" type="text/css"/>
+</head>
+<body>
+
+<div id="detalleProducto">
+  <div class="item">
+    <img id="imagenProducto" src="" alt="Producto" class="Prod">
+    <div class="product-info">
+      <p id="nombreProducto"></p>
+      <p id="descripcionProducto"></p>
+      <p id="precioProducto"></p>
+    </div>
+  </div>
+</div>
+
+<div id="totalCarrito">
+  <h2>Total del Carrito</h2>
+  <p id="total"></p>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Obtener los parámetros de la URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const nombreProducto = urlParams.get('nombre');
+  const descripcionProducto = urlParams.get('descripcion');
+  const precioProducto = parseFloat(urlParams.get('precio')); // Convertir el precio a número
+  const imagenProducto = urlParams.get('imagen');
+
+  // Mostrar los datos en la página
+  document.getElementById("nombreProducto").textContent = nombreProducto || "Nombre del Producto";
+  document.getElementById("descripcionProducto").textContent = descripcionProducto || "Descripción del Producto";
+  document.getElementById("precioProducto").textContent = isNaN(precioProducto) ? "Precio: Precio no disponible" : "Precio: $" + precioProducto.toFixed(2);
+  document.getElementById("imagenProducto").src = imagenProducto || "imagenNoDisponible.png";
+
+  // Calcular y mostrar el total del carrito
+  var total = parseFloat(localStorage.getItem("totalCarrito")) || 0;
+  if (!isNaN(precioProducto)) {
+    total += precioProducto;
+    localStorage.setItem("totalCarrito", total);
+  }
+  document.getElementById("total").textContent = "Total: $" + total.toFixed(2);
+});
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detalles del Producto</title>
+</head>
+<body>
+
+<div id="detalleProducto">
+  <div class="item">
+    <img id="imagenProducto" src="" alt="Producto" class="Prod">
+    <div class="product-info">
+      <p id="nombreProducto"></p>
+      <p id="descripcionProducto"></p>
+      <p id="precioProducto"></p>
+    </div>
+  </div>
+</div>
+
+<div id="totalCarrito">
+  <h2>Total del Carrito</h2>
+  <p id="total"></p>
+</div>
+
+<button class="boton-pedido" onclick="window.location.href = 'Pagos.html';">Realizar Pedido</button>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Obtener los parámetros de la URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const nombreProducto = urlParams.get('nombre');
+  const descripcionProducto = urlParams.get('descripcion');
+  const precioProducto = parseFloat(urlParams.get('precio')); // Convertir el precio a número
+  const imagenProducto = urlParams.get('imagen');
+
+  // Mostrar los datos en la página
+  document.getElementById("nombreProducto").textContent = nombreProducto || "Nombre del Producto";
+  document.getElementById("descripcionProducto").textContent = descripcionProducto || "Descripción del Producto";
+  document.getElementById("precioProducto").textContent = isNaN(precioProducto) ? "Precio: Precio no disponible" : "Precio: $" + precioProducto.toFixed(2);
+  document.getElementById("imagenProducto").src = imagenProducto || "imagenNoDisponible.png";
+
+  // Calcular y mostrar el total del carrito
+  var total = parseFloat(sessionStorage.getItem("totalCarrito")) || 0;
+  if (!isNaN(precioProducto)) {
+    total += precioProducto;
+    sessionStorage.setItem("totalCarrito", total);
+  }
+  document.getElementById("total").textContent = "Total: $" + total.toFixed(2);
+});
+</script>
+
+</body>
+</html>
